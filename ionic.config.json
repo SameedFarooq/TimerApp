@@ -1,0 +1,7 @@
+{
+  "name": "TimerAp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
