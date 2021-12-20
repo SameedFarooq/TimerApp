@@ -1,7 +1,11 @@
 import { Redirect, Route } from 'react-router-dom';
 import { IonApp, IonRouterOutlet, setupIonicReact } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import Home from './pages/Home';
+import Home from './pages/Home/Home';
+import TimerClock from './components/timer-clock/timer-clock';
+// import Calendar from './components/Calendar/Calendar';
+import AttendanceProfile from './components/attendance-profile/attendance-profile';
+import Settings from './components/settings/settings';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -34,6 +38,14 @@ const App: React.FC = () => (
         <Route exact path="/">
           <Redirect to="/home" />
         </Route>
+        {/* <Route exact path="/timer-clock">
+          <TimerClock />
+        </Route>
+         */}
+         
+        {/* <Route exact path="/settings">
+          <Settings />
+        </Route> */}
       </IonRouterOutlet>
     </IonReactRouter>
   </IonApp>

@@ -1,0 +1,256 @@
+.header{
+  background:var(--backCol);
+  min-height:120px;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  height: 20vh  ;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+
+}
+ion-header{
+  min-height: 83px;
+  height: 10vh;
+  display: flex;
+    align-items: center;
+    padding: 12px;
+    background-color: white;
+}
+h4{
+  margin: 0;
+  font-weight: 600;
+}
+.fa-chevron-left{
+  margin-right: 10px;
+}
+.date-div{
+  box-shadow: 0px 0px 20px 2px #0000000d;
+  width: 100%;
+  height: 83px;
+  background: white;
+  border-radius: 20px;
+  margin:10px 0px 20px 0px;
+  display: flex;
+  align-self: center;
+
+}
+.header div{
+  text-align: center;
+  color: #fff;
+}
+.head-1{
+  font-size: 21px;
+  margin-right: 5px;
+}
+.fa-chevron-down{
+ margin: 5px 0px 0px 5px;
+}
+
+
+
+.header h2{
+  font-size: 55px;
+}
+
+.d-flex{
+display: flex;
+justify-content: space-between;
+padding: 0px 20px;
+}
+.ion-icons{
+  width: 24px;
+  height: 24px;
+}
+.icon-notification{
+    width: 25px;
+    height: 25px;
+}
+.last-icon{
+  display: flex;
+padding: 15px 0px;
+margin: 30px 20px 0px 20px;
+border-radius: 20px;
+justify-content: center;
+background: #92e6eb29;
+font-weight: 500;
+}
+
+ svg{
+
+      fill: #fff;
+
+}
+.d-flex-space-b{
+  display: flex;
+  align-items: center;
+}
+
+ion-content{
+  position: relative;
+  --background:#f5f5f56e;
+  --padding-top: 10vh!important;
+  box-shadow: inset 0px -7px 20px 0px #97979738;
+}
+ion-chip{
+  background: #c3c3c32b;
+    box-shadow: inset 0px 0px 18px 0px #7c7c7c59;
+}
+.main-div{
+  width: 100%;
+    height: 24vh;
+margin: auto;
+padding: 20px;
+}
+.clock-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.inner-clock {
+  position: absolute;
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.inner-clock h5{
+  font-size: 23px;
+}
+.dialer-2{
+  color: #818181;
+}
+.inner-clock h4{
+  font-size: 55px;
+  font-weight: 600;
+  letter-spacing: 2px;
+
+}
+.clock-div svg{
+  width: 90%;
+  height: auto;
+  margin: 0;
+  border: 14px solid #ff8080;
+    border-radius: 50%;
+    padding: 10px
+;
+
+}
+
+.h2{
+  background: #92e6eb29;
+  margin: 8px;
+  border-radius: 50%;
+  padding: 7px;
+  display: inline-block;
+  padding:44px 40px;
+  font-size: 22px;
+  box-shadow: 0px 0px 4px 0px #454c4e59
+}
+
+
+.short-name{
+  background: #50cddb;
+  padding:12px 18px;
+  border-radius: 30px;
+   color: white;
+   font-size: 18px;
+
+
+}
+.btn-start{
+  margin-top: 6vh;
+  --background: #1d7cff;
+  margin-bottom: 20px;
+}
+.footer-div{
+  display: flex;
+  padding: 18px 0px;
+position: relative;
+}
+.fa-volume-up{
+  margin-top: 6vh;
+}
+.fa-volume-up:before {
+  display: flex;
+}
+.fa-volume-up:before {
+  color: #1d7cff;
+  padding: 16px 16px 16px 16px;
+  border-radius: 30px;
+   bottom: 19px;
+   background-color: white;
+   font-size: 16px;
+   box-shadow: 0px 0px 11px 2px #c6c6c63d;
+}
+
+.footer-div i{
+  flex-grow: 1;
+  text-align: center;
+  font-size: 25px;
+  color: #3a3a3ab0;
+  position: relative;
+}
+.fa-plus:before {
+  display: flex;
+}
+.fa-plus:before {
+  content: "\f067";
+  background: #ff4646;
+  padding: 16px 18px;
+  border-radius: 30px;
+   bottom: 19px;
+   color: white;
+   font-size: 16px;
+}
+.footer-div .active::after{
+  content: '';
+  background-color: #6565f9;
+  width: 23px;
+  height: 4px;
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translate(-49%, 7px);
+  border-radius: 43px;
+}
+.footer-div .active{
+  color: rgb(22, 22, 22);
+}
+.short-name{
+  background: #50cddb;
+  padding:12px 18px;
+  border-radius: 13px;
+   color: white;
+   font-size: 18px;
+}
+ion-footer ion-input{
+  width: 81%;
+    border-radius: 20px;
+    background: #f1f1f1;
+    flex: inherit;
+}
+.footer-div .active::after{
+  content: '';
+  background-color: #6565f9;
+  width: 23px;
+  height: 4px;
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translate(-49%, 7px);
+  border-radius: 43px;
+}
+.footer-div .active{
+  color: rgb(22, 22, 22);
+}
+.footer-div a{
+  text-align: center;
+   flex-grow: 1;
+}
+ion-footer{
+  position: absolute;
+  bottom: 0px;
+}
