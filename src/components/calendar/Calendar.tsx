@@ -1,6 +1,6 @@
 import React from "react";
 import dateFns from "date-fns";
-
+import './Calendar.css'
 class Calendar extends React.Component {
   state = {
     currentMonth: new Date(),
@@ -76,7 +76,7 @@ class Calendar extends React.Component {
                 ? "disabled"
                 : dateFns.isSameDay(day, selectedDate) ? "selected" : ""
             }`}
-            key={day}
+            key={day+"0"}
             // onClick={() => this.onDateClick(dateFns.parse(cloneDay))}
           >
             <span className="number">{formattedDate}</span>
@@ -87,7 +87,7 @@ class Calendar extends React.Component {
         day = dateFns.addDays(day, 1);
       }
       rows.push(
-        <div className="row" key={day}>
+        <div className="row" key={day+"9"}>
           {days}
           <div className="col cell">
           <span className="time" style={{top: "2.2em"}}>00:00</span>
@@ -99,7 +99,7 @@ class Calendar extends React.Component {
     return <div className="body">{rows}</div>;
   }
 
-  onDateClick = day => {
+  onDateClick = (day:any) => {
     this.setState({
       selectedDate: day
     });

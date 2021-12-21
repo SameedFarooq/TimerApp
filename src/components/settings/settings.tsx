@@ -1,22 +1,24 @@
 
-import { IonPage, IonContent, IonHeader, IonIcon, IonFooter, IonInput, IonButton ,IonChip,IonAvatar,IonToggle} from '@Ionic/react';
+import { IonPage, IonContent, IonToggle, IonHeader, IonIcon, IonFooter, IonInput, IonButton } from '@ionic/react';
+import withStyles from 'react-jss';
+import settingsStyle from './settingsStyle';
 
-import '../attendance-profile/attendance-profile.css';
-const Settings: React.FC = () => {
+
+const Settings = (props:any) => {
   return (
-<div>
-<IonHeader>
+   <>
+   <IonHeader className={props.classes.header}>
   <h4>
-    <i className="fas fa-chevron-left"></i>
+
     Settings</h4>
 </IonHeader>
 
-<IonContent style={{background:"#f9f9f9"}}>
-  <div className="main-div">
+<IonContent style={{background:"#f9f9f9"}}  className={props.classes.container}>
+  <div className={props.classes.mainDiv}>
 
-    <h4 className="title-div">Your Profile</h4>
-    <div className="date-div">
-     <div className="table-b">
+    <h4 className={props.classes.titleDiv}>Your Profile</h4>
+    <div className={props.classes.dateDiv}>
+     <div className={props.classes.tableBox}>
     <h2>
       WorkSpace
     </h2>
@@ -24,7 +26,7 @@ const Settings: React.FC = () => {
      Sameed Farooq
     </h5>
      </div>
-     <div className="table-b">
+     <div className={props.classes.tableBox}>
     <h2>
       Name
     </h2>
@@ -32,7 +34,7 @@ const Settings: React.FC = () => {
      Sameed Farooq
     </h5>
      </div>
-     <div className="table-b">
+     <div className={props.classes.tableBox}>
     <h2>
       Email Address
     </h2>
@@ -42,9 +44,9 @@ const Settings: React.FC = () => {
      </div>
    </div>
 
-    <h4 className="title-div">Date and Time</h4>
-    <div className="date-div">
-     <div className="table-b">
+    <h4 className={props.classes.titleDiv}>Date and Time</h4>
+    <div className={props.classes.dateDiv}>
+     <div className={props.classes.tableBox}>
     <h2>
       Date format
     </h2>
@@ -52,7 +54,7 @@ const Settings: React.FC = () => {
       MM/DD/YYYY
     </h5>
      </div>
-     <div className="table-b" style={{display: 'flex',alignItems: 'center',justifyContent: "space-between",width: "100%"}}>
+     <div className={props.classes.tableBox} style={{display: 'flex',alignItems: 'center',justifyContent: "space-between",width: "100%"}}>
     <h2>
       Use 24 hour clock
     </h2>
@@ -61,9 +63,9 @@ const Settings: React.FC = () => {
 
    </div>
 
-    <h4 className="title-div">General</h4>
-    <div className="date-div">
-     <div className="table-b">
+    <h4 className={props.classes.titleDiv}>General</h4>
+    <div className={props.classes.dateDiv}>
+     <div className={props.classes.tableBox}>
     <h2>
         Submit Feedback
     </h2>
@@ -71,19 +73,19 @@ const Settings: React.FC = () => {
        Tap to Submit
     </h5>
      </div>
-     <div className="table-b">
+     <div className={props.classes.tableBox}>
     <h2>
         About
     </h2>
      </div>
-     <div className="table-b">
+     <div className={props.classes.tableBox}>
     <h2>
         Help
     </h2>
      </div>
 
    </div>
-    <div className="date-div">
+    <div className={props.classes.dateDiv}>
       <IonButton expand="full" fill="outline" color="danger">Sign Out</IonButton>
    </div>
 
@@ -91,8 +93,10 @@ const Settings: React.FC = () => {
   </div>
 </IonContent>
 
-</div>
-  )
-}
+   </>
+  );
+};
 
-export default Settings;
+// export default Settings;
+export default withStyles(settingsStyle)(Settings)
+

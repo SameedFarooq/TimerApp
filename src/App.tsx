@@ -5,7 +5,9 @@ import Home from './pages/Home/Home';
 import TimerClock from './components/timer-clock/timer-clock';
 // import Calendar from './components/Calendar/Calendar';
 import AttendanceProfile from './components/attendance-profile/attendance-profile';
-import Settings from './components/settings/settings';
+import Settings from './components/Settings/Settings';
+import ActivityScedule from './components/ActivityScedule/ActivityScedule';
+import SignIn from './components/SignIn/SignIn';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -25,6 +27,7 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
+import './App.css';
 
 setupIonicReact();
 
@@ -32,19 +35,23 @@ const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
       <IonRouterOutlet>
-        <Route exact path="/home">
-          <Home />
-        </Route>
         <Route exact path="/">
           <Redirect to="/home" />
         </Route>
-        {/* <Route exact path="/timer-clock">
-          <TimerClock />
+        <Route exact path="/home">
+          <Home />
         </Route>
-         */}
-         
-        {/* <Route exact path="/settings">
+        <Route exact path="/timer-clock">
+          <TimerClock />
+        </Route> 
+        <Route exact path="/settings">
           <Settings />
+        </Route>
+        <Route exact path="/activity-scedule">
+          <ActivityScedule />
+        </Route>
+        {/* <Route exact path="/signin">
+          <SignIn />
         </Route> */}
       </IonRouterOutlet>
     </IonReactRouter>
