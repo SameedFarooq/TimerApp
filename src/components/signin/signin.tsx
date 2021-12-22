@@ -1,15 +1,14 @@
-import { IonPage, IonContent, IonThumbnail, IonCheckbox, IonHeader, IonIcon, IonFooter, IonInput, IonButton ,IonChip,IonAvatar,IonGrid,IonRow,IonCol} from '@Ionic/react';
+// import React from 'react';
+import {  IonContent, IonIcon, IonInput, IonButton} from '@ionic/react';
 
-// import ExploreContainer from '../components/ExploreContainer';
 import withStyles from 'react-jss';
 import SignInStyle from './SignInStyle';
 
 
 
-const SignIn = (props:any)=> {
+const SignIn: React.FC  = (props:any)=> {
   return (
- <>
-
+<>
 <IonContent className={props.classes.ionContent}>
 
   <div className={props.classes.btnDiv}>
@@ -27,14 +26,12 @@ const SignIn = (props:any)=> {
     </span>
     <IonInput className={props.classes.inputs} type="password"></IonInput>
   <IonButton  color="light" className={props.classes.btnLogin}>Login</IonButton>
-  <h2 className={props.classes.divFlexAlign} style={{marginTop: "16px"}}>Forgot your Password? <span className={props.classes.signupLink}>Reset </span></h2>
-
+  <h2 className={props.classes.divFlexAlign} style={{marginTop: "16px"}}>Forgot your Password?<span className={props.classes.signupLink}>Reset </span></h2>
 </div>
 </IonContent>
-  </>
- 
+</>
  )
 }
-
+ 
 export default withStyles(SignInStyle)(SignIn);
 

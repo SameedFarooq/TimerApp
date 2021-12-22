@@ -6,11 +6,19 @@ header:{
     display: 'flex',
       alignItems: 'center',
       padding: '12px',
+      "& a":{
+        textDecoration:"none",
+        color: '#00314a', 
+        marginTop: '3px',
+      },
+      "& h4":{
+        margin:"0px",
+      },
   }, 
   container:{
     position: 'relative',
-    background:'#f5f5f56e!important',
-    paddingTop: '22px!important',
+    '--background':'#f5f5f56e!important',
+    '--padding-top': '22px!important',
     boxShadow:' inset 0px -7px 20px 0px #97979738',
    "& h2,h3, h5":{
     color:'#2a2828d9',

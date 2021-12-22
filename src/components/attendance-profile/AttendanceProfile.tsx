@@ -1,22 +1,21 @@
 import { IonPage, IonContent, IonHeader, IonIcon, IonFooter, IonInput, IonButton ,IonChip,IonAvatar} from '@Ionic/react';
 
-// import ExploreContainer from '../components/ExploreContainer';
-import './attendance-profile.css';
-// import React from 'React';
+import withStyles from 'react-jss';
+import AttendanceProfileStyle from './AttendanceProfileStyle';
 
-const AttendanceProfile: React.FC = () => {
+const AttendanceProfile = (props:any)=> {
   return (
  <>
 
-    <IonHeader>
-      <div className="header">
-        <div className="d-flex">
+    <IonHeader className={props.classes.header}>
+      <div className={props.classes.headerBox}>
+        <div className={props.classes.dFlex}>
     
-          <div className="div-avatar">
-            <IonAvatar className="avatar-1">
+          <div className={props.classes.divAvatar}>
+            <IonAvatar className={props.classes.avatar1}>
               <img src="https://thumbs.dreamstime.com/b/handsome-man-black-suit-white-shirt-posing-studio-attractive-guy-fashIon-hairstyle-confident-man-short-beard-125019349.jpg" />
             </IonAvatar>
-           <span className="head-1">Hi, William</span>
+           <span className={props.classes.head1}>Hi, William</span>
          <IonIcon className="fas fa-chevron-down"></IonIcon>
           </div>
           <div>
@@ -27,11 +26,11 @@ const AttendanceProfile: React.FC = () => {
           </div>
         </div>
         <div style={{marginTop: '30px'}} >
-          <span className="radial-bar">
-          <span className="h2">90%</span>
+          <span className={props.classes.radialBar}>
+          <span className={props.classes.h2}>90%</span>
         </span>
         </div>
-         <div className="last-icon">
+         <div className={props.classes.lastIcon}>
            90% Attendance Completed
            <div >
             {/* <svg versIon="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -98,9 +97,9 @@ const AttendanceProfile: React.FC = () => {
     
         </div>
          </div>
-         <div className="attendance-sheet">
+         <div className={props.classes.attendanceSheet}>
           <span style={{fontSize: '19px'}}>Detail</span>
-          <div className="d-flex sheet-div">
+          <div className={props.classes.dFlex+" "+ props.classes.sheetDiv}>
             <div>
               <i className="far fa-smile"></i>
              <div> Attend</div>
@@ -123,15 +122,15 @@ const AttendanceProfile: React.FC = () => {
      </IonHeader>
     
      <IonContent>
-     <div className="main-div">
-       <div className="table-h d-flex-space-b">
+     <div className={props.classes.maindiv}>
+       <div className={props.classes.tableHead+""+ props.classes.dFlexSpace}>
          <span>Today</span>
        </div>
-       <div className="table-b">
-       <div className="table-r d-flex-space-b">
+       <div className={props.classes.tableB}>
+       <div className={props.classes.tableRow+""+ props.classes.dFlexSpace}>
         <div>
-        <span className="short-name">C</span>
-         <span className="table-d-p">
+        <span className={props.classes.shortName}>C</span>
+         <span className={props.classes.tableDP}>
           <b>Project Meeting</b>
          <span style={{fontSize: '12px',fontWeight: 'lighter',display: 'flex',alignItems: 'center',marginTop: '3px'}}>
           <IonIcon style={{marginRight: "5px",fontWeight: "bold",fontSize: "18px"}}  name="time-outline"></IonIcon> 09:50</span>
@@ -153,10 +152,10 @@ const AttendanceProfile: React.FC = () => {
       </span>
         </div>
       </div>
-      <div className="table-r d-flex-space-b">
+      <div className={props.classes.tableRow+""+ props.classes.dFlexSpace}>
         <div>
-        <span className="short-name">A</span>
-         <span className="table-d-p">
+        <span className={props.classes.shortName}>A</span>
+         <span className={props.classes.tableDP}>
           <b>Project Meeting</b>
           <span style={{fontSize: '12px',fontWeight: 'lighter',display: 'flex',alignItems: 'center',marginTop: '3px'}}>
           <IonIcon style={{marginRight: "5px",fontWeight: "bold",fontSize: "18px"}}  name="time-outline"></IonIcon> 13:00</span>
@@ -183,12 +182,12 @@ const AttendanceProfile: React.FC = () => {
      </div>
      </IonContent>
      <IonFooter style={{background:'white'}}>
-      <div className="footer-div">
-        <a href="/welcome-page"><i className="fas fa-home"></i></a>
-        <a href="/timer-clock"><i className="far fa-clock "></i></a>
-        <a href="/attendance-box"><i className="far fa-calendar"></i></a>
-        <a href="/attendance-profile"><i className="far fa-user active "></i></a>
-      </div>
+     <div className={props.classes.footerDiv}>
+    <a href="/welcome-page"><i className="fas fa-home "></i></a>
+    <a href="/timer-clock "><i className="far fa-clock active"></i></a>
+    <a href="/attendance-box"><i className="far fa-calendar"></i></a>
+    <a href="/attendance-profile"><i className="far fa-user"></i></a>
+    </div>
      </IonFooter>
     
        </>

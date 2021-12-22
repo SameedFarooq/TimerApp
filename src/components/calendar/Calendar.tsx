@@ -1,7 +1,11 @@
+import { IonPage, IonContent, IonHeader, IonIcon, IonFooter, IonInput, IonButton ,IonChip,IonAvatar} from '@ionic/react';
+
 import React from "react";
-import dateFns from "date-fns";
+import * as dateFns from "date-fns";
 import './Calendar.css'
+
 class Calendar extends React.Component {
+  
   state = {
     currentMonth: new Date(),
     selectedDate: new Date()
@@ -12,20 +16,24 @@ class Calendar extends React.Component {
   renderHeader() {
     const dateFormat = "MMMM YYYY";
 
+      
     return (
-      <div className="header row flex-middle">
+     <>
+    
+     <div className="header row flex-middle">
         <div className="col col-start">
           <div className="icon" onClick={this.prevMonth}>
             chevron_left
           </div>
         </div>
         <div className="col col-center">
-          <span>{dateFns.format(this.state.currentMonth, dateFormat)}</span>
+          <span style={{whiteSpace:"nowrap"}}>{dateFns.format(this.state.currentMonth, dateFormat)}</span>
         </div>
         <div className="col col-end" onClick={this.nextMonth}>
           <div className="icon">chevron_right</div>
         </div>
       </div>
+      </>
     );
   }
 
@@ -44,8 +52,8 @@ class Calendar extends React.Component {
       );
     }
 
-    return <div className="days row">{days}<div className="col col-end">
-           <span style={{paddingRight:"2rem"}}>week</span> 
+    return <div className="days row size-rows">{days}<div className="col col-center">
+           <span >week</span> 
   </div></div>;
   }
 
@@ -90,7 +98,7 @@ class Calendar extends React.Component {
         <div className="row" key={day+"9"}>
           {days}
           <div className="col cell">
-          <span className="time" style={{top: "2.2em"}}>00:00</span>
+          <span className="time" >00:00</span>
         </div>
         </div>
       );
@@ -119,12 +127,26 @@ class Calendar extends React.Component {
 
   render() {
     return (
-      <div className="calendar">
+     <>
+     <IonHeader>
+      <h4>
+        Timer Start</h4>
+    </IonHeader>
+     <IonContent className="calendar">
         {this.renderHeader()}
         {this.renderDays()}
         {this.renderCells()}
         <div></div>
-      </div>
+      </IonContent>
+      <IonFooter style={{backgroundColor:'white'}}>
+  <div className="footer-div">
+    <a href="/welcome-page"><i className="fas fa-home"></i></a>
+    <a href="/timer-clock"><i className="far fa-clock  "></i></a>
+    <a href="/calendar"><i className="far fa-calendar active"></i></a>
+    <a href="/attendance-profile"><i className="far fa-user  "></i></a>
+</div>
+ </IonFooter>
+     </>
     );
   }
 }

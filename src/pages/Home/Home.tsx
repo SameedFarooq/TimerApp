@@ -1,14 +1,18 @@
 import { IonPage, IonContent, IonHeader, IonIcon, IonFooter, IonInput, IonButton } from '@ionic/react';
-import './Home.css';
 
-const Home: React.FC = () => {
+import withStyles from 'react-jss';
+import HomeStyle from './HomeStyle';
+
+
+const Home = (props:any) => {
+
   return (
     <IonPage>
-        <IonHeader>
-  <div className="header">
-    <div className="d-flex">
+        <IonHeader className={props.classes.header}>
+  <div className={props.classes.innerHeader}>
+    <div className={props.classes.dFlex}>
 
-      <div className="div-avatar">
+      <div className={props.classes.divAvatar}>
         <div>
       
                </div>
@@ -18,45 +22,45 @@ const Home: React.FC = () => {
         <IonIcon className="icon-notification" name="notifications-outline"></IonIcon>
       </div>
     </div>
-    <span className="head-1">Hi William</span>
-    <h3 className="head-2">Good Morning</h3>
+    <span className={props.classes.head1}>Hi William</span>
+    <h3 className={props.classes.head2}>Good Morning</h3>
    </div>
  </IonHeader>
 
- <IonContent>
- <div className="main-div">
-  <div className="d-flex btn-div">
+ <IonContent className={props.classes.container}>
+ <div className={props.classes.mainDiv}>
+  <div className={props.classes.dFlex+" "+ props.classes.btnDiv}>
   <IonButton color="success">Check-in</IonButton>
   <IonButton color="primary">Check-out</IonButton>
    </div>
-  <div className="d-flex">
-    <div className="box-div">
+  <div className={props.classes.dFlex}>
+    <div className={props.classes.boxDiv}>
       <i className="fas fa-envelope-open-text"></i>
       Requests
     </div>
-    <div className="box-div">
+    <div className={props.classes.boxDiv}>
       <i className="fas fa-calendar-alt"></i>
       Leaves
     </div>
   </div>
-  <div className="d-flex">
-    <div className="box-div">
+  <div className={props.classes.dFlex}>
+    <div className={props.classes.boxDiv}>
       <i className="fas fa-calendar-week"></i>
       Attendance
     </div>
-    <div className="box-div">
+    <div className={props.classes.boxDiv}>
       <i className="fas fa-chalkboard-teacher"></i>
       Project Task</div>
  </div>
  </div>
  </IonContent>
- <IonFooter style={{background:'white',padding:' 20px 0px 0px 0px'}}>
-  <div className="d-flex">
-  <IonInput className='input-1'>
+ <IonFooter style={{background:'white',padding:' 20px 0px 0px 0px'}} className={props.classes.footer}>
+  <div className={props.classes.dFlex}>
+  <IonInput className={props.classes.input}>
   </IonInput>
   <i className="fas fa-play"></i>
 </div>
-  <div className="footer-div">
+  <div className={props.classes.footerDiv}>
     <a href="/welcome-page"><i className="fas fa-home active"></i></a>
     <a href="/timer-clock"><i className="far fa-clock"></i></a>
     <a href="/attendance-box"><i className="far fa-calendar"></i></a>
@@ -68,4 +72,5 @@ const Home: React.FC = () => {
   );
 };
 
-export default Home;
+export default withStyles(HomeStyle)(Home);
+

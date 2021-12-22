@@ -1,31 +1,31 @@
-import { IonPage, IonContent, IonThumbnail, IonCheckbox, IonHeader, IonIcon, IonFooter, IonInput, IonButton ,IonChip,IonAvatar,IonGrid,IonRow,IonCol} from '@Ionic/react';
+import { IonPage, IonContent, IonThumbnail, IonCheckbox, IonHeader, IonIcon, IonFooter, IonInput, IonButton ,IonChip,IonAvatar,IonGrid,IonRow,IonCol} from '@ionic/react';
 
-// import ExploreContainer from '../components/ExploreContainer';
-import './login.css';
-// import React from 'React';
+import withStyles from 'react-jss';
+import LoginStyle from './LoginStyle';
 
-const ActivityScedule: React.FC = () => {
+
+const Login = (props:any) => {
   return (
  <>
 
-<IonContent className="ion-content">
+<IonContent className={props.classes.container}>
 
-  <div className="btn-div">
+  <div className={props.classes.btnDiv}>
     <div>
       <h2>Welcome back!</h2>
       <h2 style={{fontSize: '15px',marginBottom:'12px'}}>Login To your Account and start tracking again.</h2>
-      <h2 className="div-flex-align">Don't have an account? <span className="signup-link">Sign up <IonIcon name="caret-forward-outline"></IonIcon></span></h2>
+      <h2 className={props.classes.divFlexAlign}>Don't have an account? <span className={props.classes.signupLink}>Sign up <IonIcon name="caret-forward-outline"></IonIcon></span></h2>
     </div>
-    <span className="label">
+    <span className={props.classes.label}>
       Email Address
     </span>
-    <IonInput className='inputs'></IonInput>
-    <span className="label">
+    <IonInput className={props.classes.inputs}></IonInput>
+    <span className={props.classes.label}>
     Password
     </span>
-    <IonInput className='inputs' type="password"></IonInput>
-  <IonButton  color="light" className="btn-login">Login</IonButton>
-  <h2 className="div-flex-align" style={{marginTop: "16px"}}>Forgot your Password? <span className="signup-link">Reset </span></h2>
+    <IonInput className={props.classes.inputs} type="password"></IonInput>
+  <IonButton  color="light" className={props.classes.btnLogin}>Login</IonButton>
+  <h2 className={props.classes.divFlexAlign} style={{marginTop: "16px"}}>Forgot your Password? <span className={props.classes.signupLink}>Reset </span></h2>
 
 </div>
 </IonContent>
@@ -35,4 +35,5 @@ const ActivityScedule: React.FC = () => {
  )
 }
 
-export default ActivityScedule;
+export default withStyles(LoginStyle)(Login);
+

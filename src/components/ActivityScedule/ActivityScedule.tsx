@@ -1,13 +1,16 @@
-import { IonPage, IonContent, IonThumbnail, IonCheckbox, IonHeader, IonIcon, IonFooter, IonInput, IonButton ,IonChip,IonAvatar,IonGrid,IonRow,IonCol} from '@Ionic/react';
+
+
+import { IonPage, IonContent, IonThumbnail, IonCheckbox, IonHeader, IonIcon, IonFooter, IonInput, IonButton ,IonChip,IonAvatar,IonGrid,IonRow,IonCol}  from '@ionic/react';
+import React from 'react';
 
 import withStyles from 'react-jss';
 import ActivitySceduleStyle from './ActivitySceduleStyle';
-
-
-const ActivityScedule = (props:any) => {
+const ActivityScedule: React.FC = (props:any) => {
+// const ActivityScedule = (props:any) => {
   return (
- <>
+    <IonPage>
 <IonHeader className={props.classes.header}>
+     <a href='/home'> <IonIcon className="fas fa-chevron-left"></IonIcon></a>
     <h4>
       {/* <i className={props.classes.fas fa-chevron-left}></i> */}
       Online Activity</h4>
@@ -139,7 +142,7 @@ const ActivityScedule = (props:any) => {
     </div>
   </IonContent>
   
-  </>
+  </IonPage>
  
  )
 }

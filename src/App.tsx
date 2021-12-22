@@ -2,12 +2,14 @@ import { Redirect, Route } from 'react-router-dom';
 import { IonApp, IonRouterOutlet, setupIonicReact } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import Home from './pages/Home/Home';
-import TimerClock from './components/timer-clock/timer-clock';
+import TimerClock from './components/timerClock/timerClock';
 // import Calendar from './components/Calendar/Calendar';
-import AttendanceProfile from './components/attendance-profile/attendance-profile';
+import AttendanceProfile from './components/attendance-profile/AttendanceProfile';
 import Settings from './components/Settings/Settings';
 import ActivityScedule from './components/ActivityScedule/ActivityScedule';
 import SignIn from './components/SignIn/SignIn';
+import Login from './components/login/Login';
+import Calendar from './components/calendar/Calendar';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -50,9 +52,15 @@ const App: React.FC = () => (
         <Route exact path="/activity-scedule">
           <ActivityScedule />
         </Route>
-        {/* <Route exact path="/signin">
+        <Route exact path="/signin">
           <SignIn />
-        </Route> */}
+        </Route>
+        <Route exact path="/login">
+          <Login />
+        </Route>
+        <Route exact path="/calendar">
+          <Calendar />
+        </Route>
       </IonRouterOutlet>
     </IonReactRouter>
   </IonApp>
